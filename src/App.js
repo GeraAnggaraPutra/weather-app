@@ -25,9 +25,9 @@ function App() {
   return (
     <Container className="justify-content-center mt-4 itmes-align-center text-center">
       <div className="app">
-        <div className="search">
+        <div className="row mb-3">
           <input
-            className="input text-center"
+            className='text-center'
             value={location}
             onChange={(event) => setLocation(event.target.value)}
             onKeyPress={searchLocation}
@@ -46,7 +46,7 @@ function App() {
                 ) : null}
               </div>
               <div className="temp">
-                {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+                {data.main ? <h1>{(((data.main.temp - 32) * 5) / 9).toFixed()}°C</h1> : null}
               </div>
               <div className="description">
                 {data.weather ? <p>{data.weather[0].main}</p> : null}

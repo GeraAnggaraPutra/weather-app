@@ -16,10 +16,6 @@
   z-index: -1;
 }
 
-.app .search {
-  text-align: center;
-}
-
 .app input {
   padding: 5px 25px;
   font-size: 22px;
